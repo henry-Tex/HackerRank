@@ -1,0 +1,25 @@
+function fizzBuzz (n) {;
+    for (let index = 1;index <= n ; index++) { 
+    if (index%3 === 0 && index%5 === 0)  console.log ('fizzBuzz');
+    else if (index%3 === 0)  console.log ('fizz');
+    else if (index%5 === 0)  console.log ('Buzz');
+    else console.log(index);
+}
+}
+fizzBuzz(20);
+
+// ou
+
+function fizzBuzz (n) {
+    let number = 0;
+    const idSetInterval = setInterval (contador,1000);
+    function contador() {
+    if (number >= n) return clearInterval(idSetInterval);
+    number++;
+    if (number%3 === 0 && number%5 === 0) return console.log ('fizzBuzz');
+    if (number%3 === 0) return console.log ('fizz');
+    if (number%5 === 0) return console.log ('Buzz');
+    console.log(number);
+}
+}
+fizzBuzz(15);
